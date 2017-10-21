@@ -1,4 +1,4 @@
-- type: parallel
+- type: serial # parallel causes a race condition when test runs
   steps:
     - name: checkrb
       service: demo
