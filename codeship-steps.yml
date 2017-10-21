@@ -7,11 +7,11 @@
       service: demo
       command: bundle exec ruby test.rb
 
-- type: serial
-  steps:
-    - name: awspush
-      service: demo
-      type: push
-      image_name: 952671759649.dkr.ecr.us-west-2.amazonaws.com/demo
-      registry: https://952671759649.dkr.ecr.us-west-2.amazonaws.com
-      dockercfg_service: dockercfg_generator
+#- type: serial
+#  steps:
+#    - name: awspush
+#      service: demo
+#      type: push
+#      image_name: 952671759649.dkr.ecr.us-west-2.amazonaws.com/demo
+#      registry: https://952671759649.dkr.ecr.us-west-2.amazonaws.com
+#      dockercfg_service: dockercfg_generator

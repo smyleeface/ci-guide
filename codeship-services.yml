@@ -15,7 +15,7 @@ redis:
 postgres:
    image: postgres:9.3.6
 
-dockercfg_generator:
-  image: codeship/aws-ecr-dockercfg-generator
-  add_docker: true
-  encrypted_env_file: aws.env.encrypted
+#dockercfg_generator:
+#  image: codeship/aws-ecr-dockercfg-generator
+#  add_docker: true
+#  encrypted_env_file: aws.env.encrypted
