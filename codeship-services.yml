@@ -1,13 +1,21 @@
 demo:
   build:
-    image: myapp
+    image: 952671759649.dkr.ecr.us-west-2.amazonaws.com/demo
     dockerfile: Dockerfile
   links:
     - redis
     - postgres
   environment:
     TEST_TOKEN: Testing123
+  encrypted_env_file: env.encrypted
+
 redis:
   image: redis:3.0.5
+
 postgres:
    image: postgres:9.3.6
+
+dockercfg_generator:
+  image: codeship/aws-ecr-dockercfg-generator
+  add_docker: true
+  encrypted_env_file: aws.env.encrypted
