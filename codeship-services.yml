@@ -19,4 +19,4 @@ postgres:
 dockercfg_generator:
   image: codeship/aws-ecr-dockercfg-generator
   add_docker: true
-  encrypted_env_file: aws.env.encrypted
+  encrypted_env_file: env.encrypted
