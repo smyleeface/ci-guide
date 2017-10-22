@@ -10,6 +10,7 @@ demo:
   encrypted_env_file: env.encrypted
   volumes:
     - ./tmp:/code
+  cached: true
 
 demo_volumes:
   build:
