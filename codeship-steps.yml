@@ -1,11 +1,19 @@
-- type: serial # parallel causes a race condition when test runs
+- type: parallel # parallel causes a race condition when test runs
   steps:
     - name: checkrb
       service: demo
       command: bundle exec ruby check.rb
-    - name: test
-      service: demo
-      command: bundle exec ruby test.rb
+    - type: serial
+      steps:
+      - name: test
+        service: demo
+        command: bundle exec ruby test.rb
+      - name: volumes_in
+        service: demo
+        command: bundle exec ruby write.rb
+      - name: volumes_out
+        service: demo
+        command: bundle exec ruby read.rb
 
 - type: serial
   steps:
