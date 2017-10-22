@@ -9,11 +9,11 @@ demo:
     TEST_TOKEN: Testing123
   encrypted_env_file: env.encrypted
   volumes:
-    - ./tmp:/app
+    - ./tmp:/code
 
 demo_volumes:
   build:
-    image: 952671759649.dkr.ecr.us-west-2.amazonaws.com/demo
+    image: myapp
     dockerfile: Dockerfile.volumes
   volumes_from:
     - demo
