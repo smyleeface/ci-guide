@@ -3,11 +3,11 @@
     - name: checkrb
       service: demo
       command: bundle exec ruby check.rb
+    - name: test
+      service: demo
+      command: bundle exec ruby test.rb
     - type: serial
       steps:
-      - name: test
-        service: demo
-        command: bundle exec ruby test.rb
       - name: volumes_in
         service: demo
         command: bundle exec ruby write.rb
