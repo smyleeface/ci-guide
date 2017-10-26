@@ -4,6 +4,21 @@ ACTION=$1
 
 
 function deploy_docker_image() {
+	echo "CI_PROJECT_ID: ${CI_PROJECT_ID}"
+	echo "CI_BUILD_ID: ${CI_BUILD_ID}"
+	echo "CI_REPO_NAME: ${CI_REPO_NAME}"
+	echo "CI_BRANCH: ${CI_BRANCH}"
+	echo "CI_COMMIT_ID: ${CI_COMMIT_ID}"
+	echo "CI_COMMIT_MESSAGE: ${CI_COMMIT_MESSAGE}"
+	echo "CI_COMMIT_DESCRIPTION: ${CI_COMMIT_DESCRIPTION}"
+	echo "CI_COMMITTER_NAME: ${CI_COMMITTER_NAME}"
+	echo "CI_COMMITTER_EMAIL: ${CI_COMMITTER_EMAIL}"
+	echo "CI_COMMITTER_USERNAME: ${CI_COMMITTER_USERNAME}"
+	echo "CI_TIMESTAMP: ${CI_TIMESTAMP}"
+	echo "CI_STRING_TIME: ${CI_STRING_TIME}"
+	echo "CI: ${CI}"
+	echo "CI_NAME: ${CI_NAME}"
+
 	DOCKER_REPO=952671759649.dkr.ecr.us-west-2.amazonaws.com
 	IMAGE_NAME=demo2
 	#REGION=us-west-2
@@ -24,3 +39,6 @@ case "$@" in
         echo '[ERROR] Invalid argument. Allowed arguments: run'
         exit 1 ;;
 esac
+
+
+
