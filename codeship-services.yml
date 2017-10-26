@@ -10,12 +10,8 @@ base-build-image:
     - ./code:/project
   cached: true
 
-# demo_volumes:
-#   build:
-#     image: myapp
-#     dockerfile: Dockerfile.volumes
-#   volumes_from:
-#     - demo
+demo_volumes:
+  image: 952671759649.dkr.ecr.us-west-2.amazonaws.com/demo2
 
 dockercfg_generator:
   image: codeship/aws-ecr-dockercfg-generator
