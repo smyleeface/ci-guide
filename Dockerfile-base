@@ -1,10 +1,7 @@
 FROM amazonlinux:2016.09
 
-RUN yum install docker-17.03.2ce-1.59.amzn1 -y
-
-#RUN curl -SLO "https://s3.amazonaws.com/codeship-jet-releases/1.19.3/jet-linux_amd64_1.19.3.tar.gz"
-#RUN tar -xaC /usr/local/bin -f jet-linux_amd64_1.19.3.tar.gz
-#RUN chmod +x /usr/local/bin/jet
+RUN yum install docker-17.03.2ce-1.59.amzn1 python27 python27-pip -y
+RUN pip install awscli
 
 VOLUME "/project"
 
