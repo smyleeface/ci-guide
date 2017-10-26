@@ -1,0 +1,9 @@
+FROM amazonlinux:2016.09
+
+# update and install dependencies
+RUN yum install python27 python27-pip -y
+
+# entrypoint
+ADD application-endpoint.sh /usr/local/bin/docker-entrypoint
+RUN chmod +x /usr/local/bin/docker-entrypoint
+ENTRYPOINT ["docker-entrypoint"]

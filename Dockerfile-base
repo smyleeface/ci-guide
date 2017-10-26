@@ -1,0 +1,16 @@
+FROM amazonlinux:2016.09
+
+RUN yum install docker-17.03.2ce-1.59.amzn1 -y
+
+#RUN curl -SLO "https://s3.amazonaws.com/codeship-jet-releases/1.19.3/jet-linux_amd64_1.19.3.tar.gz"
+#RUN tar -xaC /usr/local/bin -f jet-linux_amd64_1.19.3.tar.gz
+#RUN chmod +x /usr/local/bin/jet
+
+VOLUME "/project"
+
+# entrypoint
+ADD base-endpoint.sh /usr/local/bin/docker-entrypoint
+RUN chmod +x /usr/local/bin/docker-entrypoint
+RUN find ./project -type d -exec chmod +x {} \;
+WORKDIR /project
+ENTRYPOINT ["docker-entrypoint"]
