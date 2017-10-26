@@ -16,11 +16,11 @@
 #        service: demo
 #        command: bundle exec ruby read.rb
 
-- type: serial
-  steps:
-    - name: awspush
-      service: base-build-image
-      type: push
-      image_name: 952671759649.dkr.ecr.us-west-2.amazonaws.com/demo2
-      registry: https://952671759649.dkr.ecr.us-west-2.amazonaws.com
-      dockercfg_service: dockercfg_generator
+# - type: serial
+#   steps:
+#     - name: awspush
+#       service: base-build-image
+#       type: push
+#       image_name: 952671759649.dkr.ecr.us-west-2.amazonaws.com/demo2
+#       registry: https://952671759649.dkr.ecr.us-west-2.amazonaws.com
+#       dockercfg_service: dockercfg_generator
