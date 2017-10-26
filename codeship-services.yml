@@ -1,5 +1,5 @@
 base-build-image:
-  #add_docker: true
+  add_docker: true
   build:
     image: base-build-image
     dockerfile: Dockerfile-base
