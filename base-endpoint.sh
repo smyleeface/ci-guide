@@ -12,7 +12,8 @@ function deploy_docker_image() {
 	# ls -la /project
 	#eval $(aws ecr get-login --region ${REGION})
 	docker build /project --file /project/Dockerfile-application -t ${IMAGE_NAME}
-	docker tag ${IMAGE_NAME} ${DOCKER_REPO}/${IMAGE_NAME}:${CI_COMMIT_ID}
+	docker tag ${IMAGE_NAME} ${DOCKER_REPO}/${IMAGE_NAME}
+	# docker tag ${IMAGE_NAME} ${DOCKER_REPO}/${IMAGE_NAME}:${CI_COMMIT_ID}
 	#docker push ${DOCKER_REPO}/${IMAGE_NAME}:${CI_COMMIT_ID}
 }
 
