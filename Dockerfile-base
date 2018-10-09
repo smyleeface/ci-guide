@@ -8,6 +8,5 @@ VOLUME "/project"
 # entrypoint
 ADD base-endpoint.sh /usr/local/bin/docker-entrypoint
 RUN chmod +x /usr/local/bin/docker-entrypoint
-RUN find ./project -type d -exec chmod +x {} \;
 WORKDIR /project
 ENTRYPOINT ["docker-entrypoint"]

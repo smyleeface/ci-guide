@@ -26,8 +26,8 @@ function deploy_docker_image() {
 	# jet run build-application-container
 	# ls -la /project
 	#eval $(aws ecr get-login --region ${REGION})
-	docker build /project --file /project/Dockerfile-application -t ${IMAGE_NAME}
-	docker tag ${IMAGE_NAME} ${DOCKER_REPO}/${IMAGE_NAME}:helloworld
+	# docker build /project --file /project/Dockerfile-application -t ${IMAGE_NAME}
+	# docker tag ${IMAGE_NAME} ${DOCKER_REPO}/${IMAGE_NAME}:helloworld
 	# docker tag ${IMAGE_NAME} ${DOCKER_REPO}/${IMAGE_NAME}:${CI_COMMIT_ID}
 	#docker push ${DOCKER_REPO}/${IMAGE_NAME}:${CI_COMMIT_ID}
 }
