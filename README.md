@@ -11,3 +11,4 @@ This guide should help Codeship users and customers that are interested in getti
 Please let us know if you've got more questions and feel free to either email onboarding@codeship.com or sales@codeship.com to learn more about Codeship Pro and how you can make it a permanent part of your toolchain.
 
 foo-bar
+bat-baz
