@@ -9,3 +9,5 @@ This guide should help Codeship users and customers that are interested in getti
 * [Part 5](https://documentation.codeship.com/pro/getting-started/getting-started-part-five) - “Now everything is working but how can I make it faster?” Read about parallelism and caching here.
 
 Please let us know if you've got more questions and feel free to either email onboarding@codeship.com or sales@codeship.com to learn more about Codeship Pro and how you can make it a permanent part of your toolchain.
+
+foo-bar
